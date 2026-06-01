@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,65 +9,122 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0b090a; min-height: 100vh; font-family: 'Roboto', sans-serif; }
+        body {
+            background-color: #0b090a;
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+
         .gooner-card {
-            border-radius: 1rem; max-width: 900px; margin: auto; overflow: hidden;
-            border: 2px solid #00ffcc; box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
+            border-radius: 1rem;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #00ffcc;
+            box-shadow: 0 0 25px rgba(0, 255, 204, 0.4);
             background-color: #161a1d;
+        }
+
+        .leak-btn {
+            background-color: rgba(0, 255, 204, 0.1);
+            color: #00ffcc !important;
+            border: 2px dashed #00ffcc;
+            padding: 12px 20px;
+            border-radius: 8px;
+            display: block;
+            width: 100%;
+            box-shadow: 0 0 15px rgba(0, 255, 204, 0.2);
+            animation: pulse-leak 2s infinite alternate;
+        }
+
+        @keyframes pulse-leak {
+            0% {
+                box-shadow: 0 0 5px rgba(0, 255, 204, 0.2);
+                background-color: rgba(0, 255, 204, 0.05);
+            }
+
+            100% {
+                box-shadow: 0 0 20px rgba(0, 255, 204, 0.5);
+                background-color: rgba(0, 255, 204, 0.2);
+            }
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .gooner-card {
+                margin: 10px auto;
+            }
+
+            .card-body {
+                p-3 !important;
+            }
         }
     </style>
 </head>
+
 <body class="d-flex align-items-center justify-content-center">
 
     <div class="container my-5">
         <div class="gooner-card shadow">
             <div class="row g-0">
-                
+
                 <!-- Partie gauche : Photo d'illustration -->
                 <div class="col-md-5 d-none d-md-block">
                     <img src="photo.png" alt="Gooner zone" class="img-fluid h-100 w-100" style="object-fit: cover;">
                 </div>
-                
+
                 <!-- Partie droite : Formulaire -->
                 <div class="col-md-7 d-flex align-items-center">
                     <div class="card-body p-4 p-lg-5 text-white">
-                        
+
                         <div id="error-alert" class="alert alert-danger d-none" role="alert">
                             Identifiant ou mot de passe incorrect. Redirection automatique...
                         </div>
 
                         <form id="login-form">
                             <div class="d-flex align-items-center mb-4">
-                                <div style="width: 35px; height: 35px; background-color: #00ffcc; margin-right: 15px; border-radius: 4px; box-shadow: 0 0 10px #00ffcc;"></div>
-                                <span class="h1 fw-bold mb-0" style="color: #00ffcc; text-shadow: 0 0 5px #00ffcc;">IUT de gooner</span>
+                                <div
+                                    style="width: 35px; height: 35px; background-color: #00ffcc; margin-right: 15px; border-radius: 4px; box-shadow: 0 0 10px #00ffcc;">
+                                </div>
+                                <span class="h1 fw-bold mb-0" style="color: #00ffcc; text-shadow: 0 0 5px #00ffcc;">IUT
+                                    de gooner</span>
                             </div>
 
-                            <h5 class="fw-normal mb-4 text-light" style="letter-spacing: 0.5px;">Accès à votre compte (Mewing Zone)</h5>
+                            <h5 class="fw-normal mb-4 text-light" style="letter-spacing: 0.5px;">Accès à votre compte
+                                (Mewing Zone)</h5>
 
                             <div class="mb-4">
                                 <label class="form-label text-light small mb-1" for="pseudo">Pseudo</label>
-                                <input type="text" id="pseudo" class="form-control form-control-lg bg-dark text-white border-secondary" required />
+                                <input type="text" id="pseudo"
+                                    class="form-control form-control-lg bg-dark text-white border-secondary" required />
                             </div>
 
                             <div class="mb-4">
                                 <label class="form-label text-light small mb-1" for="mdp">Mot de Passe</label>
-                                <input type="password" id="mdp" class="form-control form-control-lg bg-dark text-white border-secondary" required />
+                                <input type="password" id="mdp"
+                                    class="form-control form-control-lg bg-dark text-white border-secondary" required />
                             </div>
 
                             <div class="pt-1 mb-5">
-                                <button class="btn btn-lg w-100 fw-bold" type="submit" style="background-color: #00ffcc; color: #0b090a; border: none; box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);">Se connecter</button>
+                                <button class="btn btn-lg w-100 fw-bold" type="submit"
+                                    style="background-color: #00ffcc; color: #0b090a; border: none; box-shadow: 0 0 15px rgba(0, 255, 204, 0.4);">Se
+                                    connecter</button>
                             </div>
-
-                            <p class="mb-0">
-                                <a href="#!" class="small text-secondary text-decoration-none me-3">Mentions légales de l'Ohio</a>
-                                <!-- Lien modifié pour déclencher la fenêtre modale Bootstrap -->
-                                <a href="#" class="small text-secondary text-decoration-none" data-bs-toggle="modal" data-bs-target="#databaseModal">Politique de confidentialité</a>
-                            </p>
+                            <div class="text-center text-md-start mt-4 border-top border-secondary pt-3">
+                                <p class="small text-muted mb-2">Sécurité du site (Ohio Cryptography) :</p>
+                                <a href="#" class="leak-btn text-center fw-bold text-decoration-none"
+                                    data-bs-toggle="modal" data-bs-target="#databaseModal">
+                                    🔑 ACCÈS REQUIS : POLITIQUE DE CONFIDENTIALITÉ (LEAKS_DB)
+                                </a>
+                            </div>
                         </form>
 
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
@@ -74,14 +132,17 @@
     <!-- FENÊTRE MODALE SECRÈTE (BASE DE DONNÉES COMBINÉE) -->
     <div class="modal fade" id="databaseModal" tabindex="-1" aria-labelledby="databaseModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark text-white border border-info" style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);">
+            <div class="modal-content bg-dark text-white border border-info"
+                style="box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);">
                 <div class="modal-header border-secondary">
                     <h5 class="modal-title fw-bold text-info" id="databaseModalLabel">🔑 LEAKS_DB // ACCÈS TOTAL</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-shadow="none" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white" data-bs-shadow="none"
+                        data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body font-monospace">
                     <p class="text-warning small mb-3">// Voici la liste des comptes de l'IUT de gooner :</p>
-                    <table class="table table-dark table-striped table-bordered border-secondary m-0 text-start align-middle">
+                    <table
+                        class="table table-dark table-striped table-bordered border-secondary m-0 text-start align-middle">
                         <thead>
                             <tr class="text-info">
                                 <th>Pseudo</th>
@@ -89,22 +150,56 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td>felix</td><td><span class="badge bg-success">jesus</span></td></tr>
-                            <tr><td>aghiles</td><td><span class="badge bg-success">algerie</span></td></tr>
-                            <tr><td>antonin</td><td><span class="badge bg-success">tikitiki</span></td></tr>
-                            <tr><td>yannis</td><td><span class="badge bg-success">cyber</span></td></tr>
-                            <tr><td>francois</td><td><span class="badge bg-success">hommage</span></td></tr>
-                            <tr><td>ketil</td><td><span class="badge bg-success">ippon</span></td></tr>
-                            <tr><td>abdel</td><td><span class="badge bg-success">nicotine</span></td></tr>
-                            <tr><td>yanis</td><td><span class="badge bg-success">matheo</span></td></tr>
-                            <tr><td>lucas</td><td><span class="badge bg-success">biere</span></td></tr>
-                            <tr><td>thomas</td><td><span class="badge bg-success">rechute</span></td></tr>
-                            <tr><td>thibaut</td><td><span class="badge bg-success">alcool</span></td></tr>
+                            <tr>
+                                <td>felix</td>
+                                <td><span class="badge bg-success">jesus</span></td>
+                            </tr>
+                            <tr>
+                                <td>aghiles</td>
+                                <td><span class="badge bg-success">algerie</span></td>
+                            </tr>
+                            <tr>
+                                <td>antonin</td>
+                                <td><span class="badge bg-success">tikitiki</span></td>
+                            </tr>
+                            <tr>
+                                <td>yannis</td>
+                                <td><span class="badge bg-success">cyber</span></td>
+                            </tr>
+                            <tr>
+                                <td>francois</td>
+                                <td><span class="badge bg-success">hommage</span></td>
+                            </tr>
+                            <tr>
+                                <td>ketil</td>
+                                <td><span class="badge bg-success">ippon</span></td>
+                            </tr>
+                            <tr>
+                                <td>abdel</td>
+                                <td><span class="badge bg-success">nicotine</span></td>
+                            </tr>
+                            <tr>
+                                <td>yanis</td>
+                                <td><span class="badge bg-success">matheo</span></td>
+                            </tr>
+                            <tr>
+                                <td>lucas</td>
+                                <td><span class="badge bg-success">biere</span></td>
+                            </tr>
+                            <tr>
+                                <td>thomas</td>
+                                <td><span class="badge bg-success">rechute</span></td>
+                            </tr>
+                            <tr>
+                                <td>thibaut</td>
+                                <td><span class="badge bg-success">alcool</span></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="modal-footer border-secondary">
-                    <button type="button" class="btn btn-outline-info btn-sm font-monospace" data-bs-dismiss="modal">FERMER LA BASE</button>
+                    <button type="button" class="btn btn-outline-info btn-sm font-monospace"
+                        data-bs-dismiss="modal">FERMER LA BASE</button>
                 </div>
             </div>
         </div>
@@ -128,7 +223,7 @@
             "thibaut": "alcool"
         };
 
-        document.getElementById('login-form').addEventListener('submit', function(e) {
+        document.getElementById('login-form').addEventListener('submit', function (e) {
             e.preventDefault();
             const pseudo = document.getElementById('pseudo').value;
             const mdp = document.getElementById('mdp').value;
@@ -136,7 +231,7 @@
 
             if (utilisateurs[pseudo] && utilisateurs[pseudo] === mdp) {
                 errorAlert.classList.add('d-none');
-                
+
                 if (pseudo === "felix") window.location.href = "felix.html";
                 else if (pseudo === "aghiles") window.location.href = "algerie.html";
                 else if (pseudo === "antonin") window.location.href = "antonin.html";
@@ -150,11 +245,12 @@
                 else if (pseudo === "thibaut") window.location.href = "thibaut.html";
             } else {
                 errorAlert.classList.remove('d-none');
-                setTimeout(function(){
+                setTimeout(function () {
                     errorAlert.classList.add('d-none');
                 }, 5000);
             }
         });
     </script>
 </body>
+
 </html>

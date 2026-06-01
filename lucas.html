@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>LUCAS // LE COMPTOIR DU 67</title>
@@ -14,9 +15,11 @@
             padding: 20px;
             min-height: 100vh;
         }
+
         /* Conteneur principal style taverne */
         .pub-card {
-            background: rgba(35, 23, 9, 0.9); /* Légèrement transparent pour laisser deviner le fond */
+            background: rgba(35, 23, 9, 0.9);
+            /* Légèrement transparent pour laisser deviner le fond */
             backdrop-filter: blur(5px);
             border: 4px solid #c9a054;
             box-shadow: 0 0 30px rgba(201, 160, 84, 0.4);
@@ -24,6 +27,7 @@
             max-width: 800px;
             margin: auto;
         }
+
         /* Style pour l'avatar lucasdodo.jpeg */
         .beer-avatar {
             border: 4px solid #c9a054;
@@ -32,14 +36,50 @@
             height: auto;
             object-fit: cover;
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+                background-attachment: scroll;
+            }
+
+            .pub-card,
+            .rehab-card {
+                padding: 20px !important;
+            }
+
+            .row {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .beer-avatar,
+            .thomas-avatar {
+                max-width: 130px;
+                margin-bottom: 15px;
+            }
+
+            .progress {
+                height: 15px !important;
+            }
+
+            .btn,
+            .love-badge {
+                width: 100%;
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
     </style>
 </head>
+
 <body class="d-flex align-items-center justify-content-center py-4">
 
     <div class="container">
         <div class="pub-card p-4 p-md-5">
-            
-            <h1 class="display-6 fw-bold text-center text-uppercase mb-4" style="color: #c9a054; font-family: 'Impact', sans-serif; letter-spacing: 2px;">
+
+            <h1 class="display-6 fw-bold text-center text-uppercase mb-4"
+                style="color: #c9a054; font-family: 'Impact', sans-serif; letter-spacing: 2px;">
                 🍺 LA CHANCELLERIE DE LUCAS 🍺
             </h1>
 
@@ -52,13 +92,21 @@
 
                 <div class="col-md-8">
                     <!-- Histoire de Lucas -->
-                    <div class="p-3 bg-black bg-opacity-50 rounded border border-secondary" style="font-family: sans-serif; line-height: 1.6;">
+                    <div class="p-3 bg-black bg-opacity-50 rounded border border-secondary"
+                        style="font-family: sans-serif; line-height: 1.6;">
                         <h5 style="color: #c9a054;" class="fw-bold">🍺 La Légende du Barman Ambulant</h5>
                         <p class="small text-light mb-0">
-                            Au sein du BUT Réseaux & Télécommunications, <strong>Lucas</strong> possède un super-pouvoir unique : il est capable de transformer l'eau des fontaines de l'IUT en bière blonde d'un simple regard. Véritable icône des fins de semaine, Lucas ne conçoit pas un TP d'infra sans une canette fraîche dissimulée dans son sac à dos.
+                            Au sein du BUT Réseaux & Télécommunications, <strong>Lucas</strong> possède un super-pouvoir
+                            unique : il est capable de transformer l'eau des fontaines de l'IUT en bière blonde d'un
+                            simple regard. Véritable icône des fins de semaine, Lucas ne conçoit pas un TP d'infra sans
+                            une canette fraîche dissimulée dans son sac à dos.
                         </p>
                         <p class="small text-light mt-2 mb-0">
-                            Mais son plus grand mystère reste sa fâcheuse tendance à réaliser des <strong>67</strong> de manière totalement aléatoire et régulière. Personne dans la promo ne sait exactement ce que signifie ce chiffre — s'agit-il de son nombre de pintes record, de son pourcentage de sang dans l'alcool, ou de son nombre d'absences injustifiées ? Le mystère reste entier au comptoir.
+                            Mais son plus grand mystère reste sa fâcheuse tendance à réaliser des <strong>67</strong> de
+                            manière totalement aléatoire et régulière. Personne dans la promo ne sait exactement ce que
+                            signifie ce chiffre — s'agit-il de son nombre de pintes record, de son pourcentage de sang
+                            dans l'alcool, ou de son nombre d'absences injustifiées ? Le mystère reste entier au
+                            comptoir.
                         </p>
                     </div>
                 </div>
@@ -85,7 +133,8 @@
                         <div class="mb-3">
                             <span class="small text-light d-block mb-1">Taux de d'alcool dans le sang :</span>
                             <div class="progress bg-secondary" style="height: 12px;">
-                                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" style="width: 85%">85%</div>
+                                <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated"
+                                    style="width: 85%">85%</div>
                             </div>
                         </div>
                         <div class="mb-2">
@@ -94,18 +143,21 @@
                                 <div class="progress-bar bg-danger" style="width: 67%">67%</div>
                             </div>
                         </div>
-                        <p class="small text-warning font-italic mt-2 mb-0" style="font-family: sans-serif;">⚠️ Statut : Parfaitement immunisé contre la déshydratation.</p>
+                        <p class="small text-warning font-italic mt-2 mb-0" style="font-family: sans-serif;">⚠️ Statut :
+                            Parfaitement immunisé contre la déshydratation.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Bouton de déconnexion -->
             <div class="text-end mt-4 pt-3 border-top border-secondary">
-                <a href="index.html" class="btn btn-outline-warning btn-sm px-4 fw-bold text-uppercase" style="color: #c9a054; border-color: #c9a054;">Fermer le Bar (Logout)</a>
+                <a href="index.html" class="btn btn-outline-warning btn-sm px-4 fw-bold text-uppercase"
+                    style="color: #c9a054; border-color: #c9a054;">Fermer le Bar (Logout)</a>
             </div>
 
         </div>
     </div>
 
 </body>
+
 </html>

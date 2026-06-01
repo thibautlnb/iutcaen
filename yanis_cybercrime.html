@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <title>🚨 UNCLASSIFIED // DEEP WEB DATABASE 🚨</title>
@@ -11,6 +12,7 @@
             font-family: 'Courier New', Courier, monospace;
             padding: 20px;
         }
+
         .crime-box {
             background: rgba(15, 0, 0, 0.9);
             border: 2px solid #ff0000;
@@ -19,14 +21,22 @@
             max-width: 850px;
             margin: auto;
         }
+
         .glitch-alert {
             animation: pulse 1s infinite alternate;
             text-shadow: 0 0 8px #ff0000;
         }
+
         @keyframes pulse {
-            0% { opacity: 0.6; }
-            100% { opacity: 1; }
+            0% {
+                opacity: 0.6;
+            }
+
+            100% {
+                opacity: 1;
+            }
         }
+
         .warning-banner {
             background-color: #ff3333;
             color: #000;
@@ -34,6 +44,7 @@
             text-align: center;
             letter-spacing: 2px;
         }
+
         .suspect-photo {
             border: 4px solid #ff3333;
             background-color: #000;
@@ -42,13 +53,39 @@
             filter: grayscale(30%) contrast(130%) brightness(90%);
             max-width: 200px;
         }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+
+            .crime-box {
+                padding: 20px !important;
+            }
+
+            .row {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .suspect-photo {
+                max-width: 140px;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                text-align: left;
+                padding-left: 15px;
+            }
+        }
     </style>
 </head>
+
 <body class="d-flex align-items-center justify-content-center min-vh-100">
 
     <div class="container my-4">
         <div class="crime-box p-4 p-md-5">
-            
+
             <div class="warning-banner p-2 rounded mb-4 text-uppercase">
                 ⚠️ ALERTE SÉCURITÉ : VRAIE IDENTITÉ CORROMPUE ⚠️
             </div>
@@ -66,20 +103,34 @@
 
                 <!-- Descriptif des crimes mis à jour -->
                 <div class="col-md-8">
-                    <div class="p-4 bg-black rounded border border-danger text-light shadow-inner" style="line-height: 1.7; font-family: sans-serif;">
-                        <h5 class="text-danger font-monospace border-bottom border-danger pb-2 mb-3">> SYSTEM_HACK_REVELATION.DAT</h5>
-                        
+                    <div class="p-4 bg-black rounded border border-danger text-light shadow-inner"
+                        style="line-height: 1.7; font-family: sans-serif;">
+                        <h5 class="text-danger font-monospace border-bottom border-danger pb-2 mb-3">>
+                            SYSTEM_HACK_REVELATION.DAT</h5>
+
                         <p class="small">
-                            Ne vous laissez pas berner par le décret officiel de "Mathéo". Les serveurs profonds de la cyber-police ont parlé. Son vrai nom est <strong>Yanis</strong>, et la liste de ses crimes contre l'infrastructure du BUT Réseaux & Télécommunications est terrifiante.
+                            Ne vous laissez pas berner par le décret officiel de "Mathéo". Les serveurs profonds de la
+                            cyber-police ont parlé. Son vrai nom est <strong>Yanis</strong>, et la liste de ses crimes
+                            contre l'infrastructure du BUT Réseaux & Télécommunications est terrifiante.
                         </p>
-                        
-                        <p class="fw-bold text-danger small mb-2">⚠️ RÉPERTOIRE DES MÉFAITS RÉSEAUX & COMPORTEMENTAUX :</p>
+
+                        <p class="fw-bold text-danger small mb-2">⚠️ RÉPERTOIRE DES MÉFAITS RÉSEAUX & COMPORTEMENTAUX :
+                        </p>
                         <ul class="small ps-3">
-                            <li class="mb-2"><strong class="text-danger">Attaque par déni de sommeil (DoS) :</strong> Accusé d'avoir injecté un script faisant clignoter les commutateurs Cisco de la salle d'infra à 3h du matin pour saboter les révisions.</li>
-                            <li class="mb-2"><strong class="text-danger">Trafic de bande passante occulte :</strong> Détournement de 94% de la fibre optique de l'IUT pour un botnet chargé de liker en boucle les mèmes de Felix-chan.</li>
-                            <li class="mb-2"><strong class="text-danger">Détention illégale de données volatiles :</strong> Interception des trames Wi-Fi contenant les cris de détresse de Thibaut lors de l'incident de la poule Zoubida.</li>
+                            <li class="mb-2"><strong class="text-danger">Attaque par déni de sommeil (DoS) :</strong>
+                                Accusé d'avoir injecté un script faisant clignoter les commutateurs Cisco de la salle
+                                d'infra à 3h du matin pour saboter les révisions.</li>
+                            <li class="mb-2"><strong class="text-danger">Trafic de bande passante occulte :</strong>
+                                Détournement de 94% de la fibre optique de l'IUT pour un botnet chargé de liker en
+                                boucle les mèmes de Felix-chan.</li>
+                            <li class="mb-2"><strong class="text-danger">Détention illégale de données volatiles
+                                    :</strong> Interception des trames Wi-Fi contenant les cris de détresse de Thibaut
+                                lors de l'incident de la poule Zoubida.</li>
                             <!-- Le nouveau crime sur Crazy Games -->
-                            <li class="mb-2"><strong class="text-danger">Trouble à l'ordre public sur Crazy Games :</strong> Signalé pour avoir réalisé des imitations obscènes hautement suspectes en pleine session de jeu multijoueur. Les détails de cet incident ont été censurés par la modération pour préserver la santé mentale des témoins.</li>
+                            <li class="mb-2"><strong class="text-danger">Trouble à l'ordre public sur Crazy Games
+                                    :</strong> Signalé pour avoir réalisé des imitations obscènes hautement suspectes en
+                                pleine session de jeu multijoueur. Les détails de cet incident ont été censurés par la
+                                modération pour préserver la santé mentale des témoins.</li>
                         </ul>
                     </div>
                 </div>
@@ -100,4 +151,5 @@
     </div>
 
 </body>
+
 </html>
