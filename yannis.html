@@ -2,59 +2,107 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>YANNIS.EXE // CORE MATRIX</title>
+    <title>RÉPUBLIQUE FRANÇAISE // MINISTÈRE DE L'INTÉRIEUR</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        body { background-color: #020205; color: #00ff00; font-family: 'Courier New', Courier, monospace; }
-        .ai-terminal { background: rgba(5, 20, 5, 0.9); border: 2px solid #00ff00; box-shadow: 0 0 20px rgba(0, 255, 0, 0.4); border-radius: 8px; max-width: 850px; margin: auto; }
-        .glitch-title { text-shadow: 0 0 8px #00ff00; letter-spacing: 3px; }
-        .status-online { color: #00ff00; animation: blink 1.5s infinite; }
-        @keyframes blink { 50% { opacity: 0; } }
-        .ai-avatar-container { position: relative; display: inline-block; border: 2px solid #00ff00; padding: 5px; background-color: #000; box-shadow: 0 0 15px rgba(0, 255, 0, 0.3); }
-        .ai-avatar { max-width: 180px; filter: sepia(100%) hue-rotate(60deg) brightness(90%) contrast(120%); }
-        .scan-line { position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: rgba(0, 255, 0, 0.7); box-shadow: 0 0 8px #00ff00; animation: scan 2s linear infinite; }
-        @keyframes scan { 0% { top: 0%; } 50% { top: 100%; } 100% { top: 0%; } }
-        .log-box { background-color: #000; border: 1px solid #005500; padding: 15px; font-size: 0.9rem; max-height: 250px; overflow-y: auto; }
+        body {
+            background-color: #f0f2f5;
+            color: #1a1a1a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        .civil-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 800px;
+            margin: auto;
+            border-top: 15px solid #002395;
+            position: relative;
+            overflow: hidden;
+        }
+        .republique-header {
+            border-bottom: 3px double #ef4135;
+            padding-bottom: 15px;
+        }
+        .passport-stamp {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            border: 4px double #002395;
+            color: #002395;
+            font-weight: bold;
+            padding: 8px 15px;
+            transform: rotate(-10deg);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-family: 'Courier New', Courier, monospace;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        .identity-photo {
+            border: 3px solid #ccc;
+            background-color: #fafafa;
+            padding: 5px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            max-width: 180px;
+        }
     </style>
 </head>
-<body class="d-flex align-items-center justify-content-center min-vh-100 py-4">
+<body>
 
-    <div class="container my-4">
-        <div class="ai-terminal p-4 p-md-5">
-            <div class="d-flex justify-content-between border-bottom border-success pb-3 mb-4">
-                <span>SYSTEM: QUANTUM_CORE_V4.2</span>
-                <span>STATUS: <span class="status-online">● ONLINE</span></span>
+    <div class="civil-card p-4 p-md-5 my-4">
+        <div class="passport-stamp">APPROUVÉ // PRÉFECTURE</div>
+
+        <div class="text-center republique-header mb-4">
+            <h5 class="fw-bold m-0" style="letter-spacing: 2px; color: #002395;">RÉPUBLIQUE FRANÇAISE</h5>
+            <p class="small text-muted m-0 text-uppercase">Ministère de l'Intérieur et de l'Immigration du BUT RT</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-uppercase" style="color: #ef4135;">Décret de Naturalisation Officiel</h2>
+            <p class="text-muted small">Dossier n° FR-RT-2026-N9</p>
+        </div>
+
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="./yannis.jpg" alt="Photo d'identité officielle" class="img-fluid identity-photo rounded">
+                <div class="small fw-bold mt-2 text-muted">N° NAT : 75012A88</div>
             </div>
-
-            <h1 class="display-5 fw-bold glitch-title text-center text-uppercase mb-5">🤖 YANNIS : l'IA MAN 🤖</h1>
-
-            <div class="row align-items-center mb-4">
-                <div class="col-md-4 text-center mb-4 mb-md-0">
-                    <div class="ai-avatar-container rounded">
-                        <div class="scan-line"></div>
-                        <img src="yannis.jpg" alt="IA Core Face" class="img-fluid ai-avatar rounded">
-                    </div>
-                    <div class="small font-monospace mt-2 text-success">HOST_ID // YANNIS_MAN</div>
-                </div>
-                <div class="col-md-8">
-                    <div class="p-3 bg-black rounded border border-success text-light" style="font-family: sans-serif; line-height: 1.6;">
-                        <h5 class="text-success font-monospace mb-3">> RAPPORT_BIOGRAPHIQUE.LOG</h5>
-                        <p>On l'appelle <strong>Yannis, l'IA Man par excellence</strong>. D'après les légendes urbaines du département Réseaux & Télécommunications, Yannis ne tape pas de code : il communique directement avec le processeur de sa machine par ondes cérébrales.</p>
-                        <p class="mb-0">En l'an 2025, alors qu'un serveur de l'IUT menaçait de surchauffer à cause d'un script trop lourd, Yannis a injecté une puce neuronale de sa propre conception dans le commutateur principal. En moins de deux secondes, il a optimisé l'ensemble du réseau de la fac, appris le japonais, et codé une version alternative d'ChatGPT capable de prédire les sujets des prochains examens.</p>
-                    </div>
-                </div>
+            
+            <div class="col-md-8">
+                <table class="table table-sm table-striped border">
+                    <tbody>
+                        <tr><td class="fw-bold px-3">ANCIENNE IDENTITÉ :</td><td class="px-3">Yanis</td></tr>
+                        <tr><td class="fw-bold px-3 text-primary">NOUVELLE IDENTITÉ :</td><td class="px-3 fw-bold text-primary">Mathéo</td></tr>
+                        <tr><td class="fw-bold px-3">STATUT :</td><td class="px-3"><span class="badge bg-success">Citoyen Français Valide</span></td></tr>
+                        <tr><td class="fw-bold px-3">SIGNE DISTINCTIF :</td><td class="px-3">Le noir de la classe (Nouvellement certifié de souche)</td></tr>
+                        <tr><td class="fw-bold px-3">AFFECTATION :</td><td class="px-3">IUT de gooner - Promotion R209</td></tr>
+                    </tbody>
+                </table>
             </div>
+        </div>
 
-            <div class="log-box rounded text-start mb-4 font-monospace">
-                <div class="text-muted">[08:32:11] Initialisation de Yannis.exe...</div>
-                <div class="text-success">[08:32:12] Connexion synaptique au BUT RT établie.</div>
-                <div class="text-success">[08:32:14] Tentative de hack évitée : Felix-chan a essayé d'injecter un mème.</div>
-                <div class="text-warning">[08:32:15] Alerte : Antonin a lancé un rendu vidéo, routage des ressources IA vers ses serveurs.</div>
-                <div class="text-info">[08:32:18] Analyse comportementale : Zoubida la poule d'Aghiles détectée dans le sous-réseau.</div>
-                <div class="text-success">[08:32:20] Déploiement du modèle de langage terminé. Statut divin atteint.</div>
+        <div class="p-3 bg-light border rounded mb-4">
+            <h6 class="fw-bold text-uppercase border-bottom pb-1" style="color: #002395;">Extrait du Journal Officiel :</h6>
+            <p class="small mb-2" style="line-height: 1.6;">
+                Par décret du Président du Conseil des Rizzlers de l'IUT, l'étudiant précédemment connu sous le nom de <strong>Yanis</strong> is officiellement naturalisé citoyen de la zone de Mewing. 
+            </p>
+            <p class="small mb-2" style="line-height: 1.6;">
+                Afin de faciliter son intégration dans les lignes de code complexes du BUT Réseaux & Télécommunications, l'État lui attribue solennellement le prénom hautement stratégique de <strong>Mathéo</strong>. Il dispose désormais du droit inaliénable de ne plus jamais partager sa connexion réseau et d'obtenir des frites doubles à la cantine de l'IUT.
+            </p>
+            <p class="small mb-0 font-italic text-danger text-end fw-bold">
+                * Vive la République, vive la fibre optique.
+            </p>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-3 border-top">
+            <span class="small text-muted mb-2 mb-sm-0">Document édité par les autorités de l'Ohio.</span>
+            <div>
+                <a href="index.html" class="btn btn-primary fw-bold btn-sm text-uppercase px-4 me-2" style="background-color: #002395; border: none;">Ranger les papiers (Logout)</a>
+                <!-- LIEN SECRET DISCRET (Un simple point cliquable à la fin) -->
+                <a href="yanis_cybercrime.html" class="text-secondary text-decoration-none" style="font-size: 0.8rem; opacity: 0.3; cursor: help;">.</a>
             </div>
-
-            <div class="text-end"><a href="index.html" class="btn btn-outline-success font-monospace text-uppercase btn-sm px-4">Désactiver le Noyau IA (Logout)</a></div>
         </div>
     </div>
 

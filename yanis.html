@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>RÉPUBLIQUE FRANÇAISE // MINISTÈRE DE L'INTÉRIEUR</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0f2f5;
+            color: #1a1a1a;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 20px;
+        }
+        .civil-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            max-width: 800px;
+            margin: auto;
+            border-top: 15px solid #002395;
+            position: relative;
+            overflow: hidden;
+        }
+        .republique-header {
+            border-bottom: 3px double #ef4135;
+            padding-bottom: 15px;
+        }
+        .passport-stamp {
+            position: absolute;
+            bottom: 30px;
+            right: 30px;
+            border: 4px double #002395;
+            color: #002395;
+            font-weight: bold;
+            padding: 8px 15px;
+            transform: rotate(-10deg);
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-family: 'Courier New', Courier, monospace;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        .identity-photo {
+            border: 3px solid #ccc;
+            background-color: #fafafa;
+            padding: 5px;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            max-width: 180px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="civil-card p-4 p-md-5 my-4">
+        <div class="passport-stamp">APPROUVÉ // PRÉFECTURE</div>
+
+        <div class="text-center republique-header mb-4">
+            <h5 class="fw-bold m-0" style="letter-spacing: 2px; color: #002395;">RÉPUBLIQUE FRANÇAISE</h5>
+            <p class="small text-muted m-0 text-uppercase">Ministère de l'Intérieur et de l'Immigration du BUT RT</p>
+        </div>
+
+        <div class="text-center mb-4">
+            <h2 class="fw-bold text-uppercase" style="color: #ef4135;">Décret de Naturalisation Officiel</h2>
+            <p class="text-muted small">Dossier n° FR-RT-2026-N9</p>
+        </div>
+
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center mb-4 mb-md-0">
+                <img src="./yanis.jpeg" alt="Photo d'identité officielle" class="img-fluid identity-photo rounded">
+                <div class="small fw-bold mt-2 text-muted">N° NAT : 75012A88</div>
+            </div>
+            
+            <div class="col-md-8">
+                <table class="table table-sm table-striped border">
+                    <tbody>
+                        <tr><td class="fw-bold px-3">ANCIENNE IDENTITÉ :</td><td class="px-3">Yanis</td></tr>
+                        <tr><td class="fw-bold px-3 text-primary">NOUVELLE IDENTITÉ :</td><td class="px-3 fw-bold text-primary">Mathéo</td></tr>
+                        <tr><td class="fw-bold px-3">STATUT :</td><td class="px-3"><span class="badge bg-success">Citoyen Français Valide</span></td></tr>
+                        <tr><td class="fw-bold px-3">SIGNE DISTINCTIF :</td><td class="px-3">Le noir de la classe (Nouvellement certifié de souche)</td></tr>
+                        <tr><td class="fw-bold px-3">AFFECTATION :</td><td class="px-3">IUT de gooner - Promotion R209</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="p-3 bg-light border rounded mb-4">
+            <h6 class="fw-bold text-uppercase border-bottom pb-1" style="color: #002395;">Extrait du Journal Officiel :</h6>
+            <p class="small mb-2" style="line-height: 1.6;">
+                Par décret du Président du Conseil des Rizzlers de l'IUT, l'étudiant précédemment connu sous le nom de <strong>Yanis</strong> est officiellement naturalisé citoyen de la zone de Mewing. 
+            </p>
+            <p class="small mb-2" style="line-height: 1.6;">
+                Afin de faciliter son intégration dans les lignes de code complexes du BUT Réseaux & Télécommunications, l'État lui attribue solennellement le prénom hautement stratégique de <strong>Mathéo</strong>. Il dispose désormais du droit inaliénable de ne plus jamais partager sa connexion réseau et d'obtenir des frites doubles à la cantine de l'IUT.
+            </p>
+            <p class="small mb-0 font-italic text-danger text-end fw-bold">
+                * Vive la République, vive la fibre optique.
+            </p>
+        </div>
+
+        <!-- ZONE DU LIEN SECRET DEVENUE TRÈS VISIBLE -->
+        <div class="my-4 text-center">
+            <a href="yanis_cybercrime.html" class="btn btn-danger btn-lg fw-bold px-4 shadow text-uppercase border-2" style="animation: pulse-button 1.5s infinite alternate; font-family: monospace;">
+                ⚠️ ACCÉDER AUX ARCHIVES CRITIQUES DE SÉCURITÉ
+            </a>
+        </div>
+
+        <style>
+            @keyframes pulse-button {
+                0% { box-shadow: 0 0 5px #ef4135; transform: scale(0.98); }
+                100% { box-shadow: 0 0 20px #ef4135; transform: scale(1.02); }
+            }
+        </style>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-3 border-top">
+            <span class="small text-muted mb-2 mb-sm-0">Document édité par les autorités de l'Ohio.</span>
+            <a href="index.html" class="btn btn-primary fw-bold btn-sm text-uppercase px-4" style="background-color: #002395; border: none;">Ranger les papiers (Logout)</a>
+        </div>
+    </div>
+
+</body>
+</html>
