@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>AVIS DE RECHERCHE // INTERPOL</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1c1a17;
+            color: #2b2b2b;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 20px;
+        }
+        .wanted-poster {
+            background-color: #f4ebd0;
+            border: 10px double #5c4033;
+            box-shadow: 0 0 30px rgba(0,0,0,0.7);
+            max-width: 750px;
+            margin: auto;
+            position: relative;
+        }
+        .stamp-classified {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            border: 4px solid #7a1515;
+            color: #7a1515;
+            font-weight: bold;
+            padding: 5px 10px;
+            transform: rotate(15deg);
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            opacity: 0.8;
+        }
+        .mugshot {
+            border: 5px solid #2b2b2b;
+            background-color: #fff;
+            padding: 10px;
+            box-shadow: 3px 3px 10px rgba(0,0,0,0.3);
+            max-width: 220px;
+        }
+        .line-censored {
+            background-color: #2b2b2b;
+            color: #2b2b2b;
+            user-select: none;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wanted-poster p-4 p-md-5 my-4">
+        <div class="stamp-classified">CONFIDENTIEL // FBI</div>
+
+        <div class="text-center mb-4">
+            <h1 class="display-3 fw-bold text-uppercase m-0" style="color: #7a1515; letter-spacing: 5px;">WANTED</h1>
+            <h4 class="text-muted border-bottom border-dark pb-2">AVIS DE RECHERCHE INTERNATIONALE</h4>
+        </div>
+
+        <div class="row align-items-center mb-4">
+            <div class="col-md-4 text-center mb-3 mb-md-0">
+                <img src="antonin.png" alt="Mugshot Antonin" class="img-fluid mugshot">
+                <div class="small fw-bold mt-2 text-muted">ID: #ATN-9962-AE</div>
+            </div>
+            
+            <div class="col-md-8">
+                <table class="table table-sm table-borderless" style="color: #2b2b2b;">
+                    <tbody>
+                        <tr><td><strong>NOM :</strong></td><td>ANTONIN</td></tr>
+                        <tr><td><strong>ALIAS :</strong></td><td><span class="badge bg-dark">atn.ae</span></td></tr>
+                        <tr><td><strong>CRIME :</strong></td><td class="text-danger fw-bold">Terrorisme Audiovisuel & Montage Instable</td></tr>
+                        <tr><td><strong>DERNIÈRE POSITION :</strong></td><td>IUT de Caen - Département RT <span class="line-censored">SALLE INFRA</span></td></tr>
+                        <tr><td><strong>DANGEROSITÉ :</strong></td><td><span class="text-danger">★★★★★ EXTRA-ÉLEVÉE</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="bg-white p-3 border border-dark rounded mb-4 shadow-sm">
+            <h5 class="fw-bold text-uppercase border-bottom pb-1" style="color: #7a1515;">Dossier Criminel #209</h5>
+            <p class="mb-2">
+                Le suspect connu sous le nom de <strong>atn.ae</strong> est activement recherché par les autorités pour de multiples sabotages de lignes temporelles sur Premiere Pro et After Effects. 
+            </p>
+            <p class="mb-2">
+                Antonin est accusé d'avoir utilisé de manière abusive la trend rythmique <strong>"Tiki Tiki Ponk"</strong> pour hypnotiser des promotions entières de BUT Réseaux & Télécommunications. Ses montages coupent si vite qu'ils provoquent de violentes surchauffes sur les écrans des salles de TP.
+            </p>
+            <p class="mb-0 font-italic text-muted">
+                ⚠️ Si vous croisez cet individu en train de spammer des raccourcis de découpe, ne l'approchez pas. Il est probablement armé d'un plugin de flou de mouvement non enregistré.
+            </p>
+        </div>
+
+        <div class="d-flex flex-column flex-sm-row justify-content-between align-items-center pt-3 border-top border-dark">
+            <span class="small text-muted mb-2 mb-sm-0">RECOMPENSE : 500 000 DA (Ou un routeur Cisco fonctionnel)</span>
+            <a href="index.html" class="btn btn-dark fw-bold btn-sm text-uppercase px-4" style="background-color: #7a1515; border: none;">Détruire ce dossier <br>(Logout)</a>
+        </div>
+    </div>
+
+</body>
+</html>

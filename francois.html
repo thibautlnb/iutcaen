@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>À la mémoire de François // Le Martyr du Ping</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: radial-gradient(circle, #1a1126 0%, #07040d 100%); color: #e0d5ed; font-family: 'Segoe UI', sans-serif; min-height: 100vh; }
+        .memorial-card { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(8px); border: 2px solid #8a2be2; box-shadow: 0 0 30px rgba(138, 43, 226, 0.3); border-radius: 16px; max-width: 800px; margin: auto; }
+        .profile-img { border: 4px dashed #8a2be2; padding: 5px; max-width: 180px; animation: slow-spin 20s linear infinite; }
+        @keyframes slow-spin { 100% { transform: rotate(360deg); } }
+        .quote-text { font-style: italic; color: #d8b4fe; }
+        .message-box { background: rgba(0, 0, 0, 0.4); border-left: 4px solid #8a2be2; padding: 12px; margin-bottom: 15px; }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center py-5">
+
+    <div class="container">
+        <div class="memorial-card p-4 p-md-5 text-center">
+            <div class="mb-4">
+                <img src="francois.png" alt="François" class="rounded-circle profile-img img-fluid mb-3">
+                <h1 class="display-5 fw-bold" style="color: #bc95ea; text-shadow: 0 0 10px #8a2be2;">STATION COMMÉMORATIVE : FRANÇOIS</h1>
+                <p class="text-uppercase tracking-wider text-muted small">L'homme qui pingait plus vite que son ombre</p>
+            </div>
+
+            <div class="text-start my-4 p-4 rounded bg-black bg-opacity-50" style="line-height: 1.8; font-size: 1.05rem; border: 1px solid #33145a;">
+                <p>Au sein du BUT Réseaux & Télécommunications, <strong>François</strong> était ce qu’on appelle un "cerveau supérieur". Capable de calculer des masques de sous-réseau de tête en moins de 0,4 seconde, il passait ses journées à optimiser la bande passante de l'IUT pour pouvoir regarder des streams en 4K pendant les cours magistraux.</p>
+                <p>Malheureusement, sa puissance intellectuelle a causé sa perte. Les experts estiment qu'à force de corriger les lignes de code de ses camarades et de subir le flux de *brainrot* généré par Felix-chan, le cerveau de François est entré en <strong>surchauffe CPU critique</strong>. Ce "cancer du cerveau informatique" (diagnostiqué comme une *Overclockite Aiguë*) s'est déclaré après qu'il a tenté de mémoriser l'intégralité d'Internet pour aider Thibaut à retrouver Zoubida la poule.</p>
+                <p>Son dernier mot avant que ses neurones ne grillent définitivement et qu'il ne passe de l'autre côté du routeur ? <code class="text-success">"Connection timed out."</code></p>
+                <p class="quote-text text-center mt-4 mb-0">"Parti trop tôt vers le grand Cloud céleste, là où le Wi-Fi ne coupe jamais."</p>
+            </div>
+
+            <div class="text-start mt-5">
+                <h4 class="h5 text-uppercase text-muted border-bottom pb-2 mb-3" style="color: #bc95ea;">Derniers hommages du sous-réseau</h4>
+                <div class="message-box rounded"><p class="mb-1 small text-light">"Je lui avais dit de ne pas installer l'extension IA de Yannis directement dans son cortex. Repose en paix, tu as crashé en beauté."</p><span class="text-muted small">— Un pote de table de TP</span></div>
+                <div class="message-box rounded"><p class="mb-1 small text-light">"Il nous a quittés en laissant son projet Git non commité. C'est ça le vrai drame."</p><span class="text-muted small">— Le prof de dev</span></div>
+            </div>
+
+            <div class="text-end mt-5"><a href="index.html" class="btn btn-outline-light btn-sm px-4" style="border-color: #8a2be2; color: #bc95ea;">Fermer la session de deuil</a></div>
+        </div>
+    </div>
+
+</body>
+</html>
